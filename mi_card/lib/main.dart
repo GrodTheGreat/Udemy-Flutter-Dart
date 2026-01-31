@@ -14,6 +14,7 @@ class MiCard extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 foregroundImage: AssetImage('assets/images/ravelord-nito.jpg'),
@@ -39,42 +40,37 @@ class MiCard extends StatelessWidget {
                   fontFamily: 'SourceSans3',
                 ),
               ),
-              Container(
-                padding: EdgeInsets.all(10),
-                color: Colors.white,
+              SizedBox(
+                width: 150,
+                height: 20,
+                child: Divider(color: Colors.teal.shade100),
+              ),
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                child: Row(
-                  children: [
-                    Icon(Icons.phone, color: Colors.teal),
-                    SizedBox(width: 10),
-                    Text(
-                      '+1 (555) 555-5555',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontSize: 20,
-                        fontFamily: 'SourceSans3',
-                      ),
+                child: ListTile(
+                  leading: Icon(Icons.phone, color: Colors.teal),
+                  title: Text(
+                    '+1 (555) 555-5555',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontSize: 20,
+                      fontFamily: 'SourceSans3',
                     ),
-                  ],
+                  ),
                 ),
               ),
-              Container(
-                padding: EdgeInsets.all(10),
-                color: Colors.white,
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                child: Row(
-                  children: [
-                    Icon(Icons.email, color: Colors.teal),
-                    SizedBox(width: 10),
-                    Text(
-                      'john_doe@email.com',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontSize: 20,
-                        fontFamily: 'SourceSans3',
-                      ),
+                child: ListTile(
+                  leading: Icon(Icons.email, color: Colors.teal),
+                  title: Text(
+                    'john_doe@email.com',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontSize: 20,
+                      fontFamily: 'SourceSans3',
                     ),
-                  ],
+                  ),
                 ),
               ),
             ],
