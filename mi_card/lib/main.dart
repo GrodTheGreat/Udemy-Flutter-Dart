@@ -13,19 +13,28 @@ class MiCard extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+          child: Column(
             children: [
-              Container(color: Colors.red, width: 100.0),
-              Column(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(color: Colors.yellow, width: 100.0, height: 100.0),
-                  Container(color: Colors.green, width: 100.0, height: 100.0),
+                  CircleAvatar(
+                    foregroundImage: AssetImage(
+                      'assets/images/ravelord-nito.jpg',
+                    ),
+                    radius: 50.0,
+                    backgroundColor: Colors.red,
+                  ),
                 ],
               ),
-              Container(color: Colors.blue, width: 100.0),
+              Text(
+                'John Doe',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 40.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ],
           ),
         ),
