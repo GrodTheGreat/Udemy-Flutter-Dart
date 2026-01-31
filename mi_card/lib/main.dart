@@ -33,6 +33,17 @@ class MiCard extends StatelessWidget {
                   color: Colors.white,
                   fontSize: 40.0,
                   fontWeight: FontWeight.bold,
+                  fontFamily: 'Pacifico',
+                ),
+              ),
+              Text(
+                'Software Developer',
+                style: TextStyle(
+                  color: Colors.teal.shade100,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 2.5,
+                  fontFamily: 'SourceSans3',
                 ),
               ),
             ],
