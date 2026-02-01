@@ -28,9 +28,8 @@ class _BallState extends State<Ball> {
 
   void shakeBall() {
     setState(() {
-      ballNumber = Random().nextInt(5);
+      ballNumber = Random().nextInt(5) + 1;
     });
-    print(ballNumber);
   }
 
   @override
