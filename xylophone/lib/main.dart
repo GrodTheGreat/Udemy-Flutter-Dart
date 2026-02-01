@@ -12,20 +12,16 @@ class XylophoneApp extends StatelessWidget {
     player.play(AssetSource('sounds/note$soundNumber.wav'));
   }
 
-  Widget buildKey(Color color, int soundNumber) {
-    return Expanded(
-      child: TextButton(
-        style: TextButton.styleFrom(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-          backgroundColor: color,
-        ),
-        onPressed: () {
-          playSound(soundNumber);
-        },
-        child: Text(''),
+  Widget buildKey(Color color, int soundNumber) => Expanded(
+    child: TextButton(
+      style: TextButton.styleFrom(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+        backgroundColor: color,
       ),
-    );
-  }
+      onPressed: () => playSound(soundNumber),
+      child: Container(),
+    ),
+  );
 
   @override
   Widget build(BuildContext context) {
